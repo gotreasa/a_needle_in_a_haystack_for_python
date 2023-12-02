@@ -28,3 +28,11 @@ def describe_needle_in_haystack():
             needle_in_haystack.find_needle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"])
             == "✅ found the needle at position 5"
         )
+
+    def should_error_when_there_is_more_than_one_needle():
+        """🧪 should give the error there is more than one needle in the haystack when the haystack is ["needle", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]"""
+
+        assert (
+            needle_in_haystack.find_needle(["needle", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"])
+            == "❗️ error - there is more than one needle in the haystack"
+        )
