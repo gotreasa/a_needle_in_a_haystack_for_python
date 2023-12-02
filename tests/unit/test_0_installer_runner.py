@@ -21,3 +21,10 @@ def describe_needle_in_haystack():
         assert (
             needle_in_haystack.find_needle([4, "junk", "hay", 3, "needle", True]) == "✅ found the needle at position 4"
         )
+
+    def should_find_needle_at_position_5_with_string_types():
+        """🧪 should give the message found the needle at position 5 when the haystack is ["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]"""
+        assert (
+            needle_in_haystack.find_needle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"])
+            == "✅ found the needle at position 5"
+        )
