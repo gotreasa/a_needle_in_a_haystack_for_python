@@ -1,11 +1,9 @@
 import os
 
-from modules import dummy
+from modules import needle_in_haystack
 
 
-def describe_dummy_kata():
-    def should_print_title(capsys):
-        """🧪 expect the dummy kata prints the title"""
-        dummy.print_the_title()
-        out, _err = capsys.readouterr()
-        assert "😊 Welcome to Dummy Kata" in out
+def describe_needle_in_haystack():
+    def should_error_when_input_is_empty_array(capsys):
+        """🧪 should give the error no items in the haystack when the haystack is []"""
+        assert needle_in_haystack.find_needle([]) == "❗️ error - no items in the haystack"
